@@ -30,6 +30,9 @@ dependencies {
 	implementation 'org.flywaydb:flyway-mysql:9.21.0'
 	implementation 'org.springdoc:springdoc-openapi-starter-webflux-ui:2.0.4'
 
+	//FileUtils
+	implementation 'commons-io:commons-io:2.11.0'
+
 	compileOnly 'org.projectlombok:lombok:1.18.26'
 //	developmentOnly 'org.springframework.boot:spring-boot-docker-compose'
 

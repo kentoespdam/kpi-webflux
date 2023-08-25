@@ -5,8 +5,10 @@ import com.kentoes.kpi.webflux.entities.enums.EStatus;
 import com.kentoes.kpi.webflux.entities.master.MLevel;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.data.domain.Page;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Getter
 @Setter
@@ -32,5 +34,9 @@ public class MLevelWithAuditDto extends AuditDto {
                 mLevel.getCreatedBy(),
                 mLevel.getUpdatedAt(),
                 mLevel.getUpdatedBy());
+    }
+
+    private static List<MLevelWithAuditDto> from(List<MLevel> content) {
+        return content.stream().map(MLevelWithAuditDto::fromEntity).toList();
     }
 }

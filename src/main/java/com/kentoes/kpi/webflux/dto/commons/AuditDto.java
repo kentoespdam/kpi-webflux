@@ -7,12 +7,14 @@ import jakarta.persistence.Column;
 import jakarta.persistence.MappedSuperclass;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @MappedSuperclass
 @AllArgsConstructor
+@NoArgsConstructor
 @Data
 public abstract class AuditDto implements Serializable {
     @JsonSerialize(using = LocalDateTimeSerializer.class)

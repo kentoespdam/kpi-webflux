@@ -4,6 +4,7 @@ import org.springframework.http.HttpStatus;
 
 public interface IGlobalMessage {
     String OK_MESSAGE = "data found";
+    String NOT_FOUND_MESSAGE = "data not found";
     String SAVE_MESSAGE = "data saved successfully";
     String UPDATE_MESSAGE = "data updated successfully";
     String DELETE_MESSAGE = "data deleted successfully";
